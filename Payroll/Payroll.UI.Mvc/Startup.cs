@@ -12,6 +12,7 @@ using Payroll.UI.Mvc.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Payroll.Infrastructure.Data.Context;
 
 namespace Payroll.UI.Mvc
 {
@@ -32,6 +33,11 @@ namespace Payroll.UI.Mvc
                     Configuration.GetConnectionString("PayrollDBConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            services.AddDbContext<PayrollDBContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("PayrollDBConnection"));
+            });
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
