@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Payroll.Infrastructure.Data\Payroll.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Payroll.Infrastructure.IoC\Payroll.Infrastructure.IoC.csproj" />
   </ItemGroup>
 
 </Project>
