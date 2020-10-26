@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Payroll.Api.Configurations;
 using Payroll.Infrastructure.Data.Context;
 using Payroll.Infrastructure.IoC;
 
@@ -47,6 +48,7 @@ namespace Payroll.Api
             );
             services.AddMediatR(typeof(Startup));
             services.AddControllers();
+            services.RegisterAutoMapper();
             RegisterServices(services);
         }
 
