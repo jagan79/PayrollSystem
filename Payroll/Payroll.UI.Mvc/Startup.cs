@@ -14,6 +14,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Payroll.Infrastructure.Data.Context;
 using Payroll.Infrastructure.IoC;
+using MediatR;
 
 namespace Payroll.UI.Mvc
 {
@@ -42,6 +43,7 @@ namespace Payroll.UI.Mvc
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            services.AddMediatR(typeof(Startup));
             RegisterServices(services);
         }
 
