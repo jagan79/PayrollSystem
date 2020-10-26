@@ -1,10 +1,24 @@
-﻿using System;
+﻿using MediatR;
+using Payroll.Domain.Core.Bus;
+using Payroll.Domain.Core.Commands;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Payroll.Infrastructure.Bus
 {
-    public class InMemoryBus
+    public sealed class InMemoryBus : IMediatorHandler
     {
+        private readonly IMediator _mediator;
+        public InMemoryBus(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
+
+        public Task SendCommand<T>(T command) where T : Command
+        {
+            return _mediator.Send(command);
+        }
     }
 }
