@@ -8,5 +8,6 @@ namespace Payroll.Domain.Interfaces
     public interface IEmployeeRepository
     {
         IEnumerable<Employee> GetEmployees();
+        void Add(Employee employee);
     }
 }

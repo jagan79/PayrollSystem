@@ -15,6 +15,13 @@ namespace Payroll.Infrastructure.Data.Repositories
         {
             _context = context;
         }
+
+        public void Add(Employee employee)
+        {
+            _context.Employees.Add(employee);
+            _context.SaveChanges();
+        }
+
         public IEnumerable<Employee> GetEmployees()
         {
             return _context.Employees;

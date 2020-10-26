@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Payroll.Application\Payroll.Application.csproj" />
+    <ProjectReference Include="..\Payroll.Infrastructure.Bus\Payroll.Infrastructure.Bus.csproj" />
     <ProjectReference Include="..\Payroll.Infrastructure.Data\Payroll.Infrastructure.Data.csproj" />
   </ItemGroup>
 
