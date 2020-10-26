@@ -23,9 +23,7 @@ namespace Payroll.UI.Mvc.Controllers
         // GET: EmployeeController
         public ActionResult Index()
         {
-            EmployeeViewModel model = _employeeService.GetEmployees();
-
-            return View(model);
+          return View(_employeeService.GetEmployees());
         }
 
         // GET: EmployeeController/Details/5

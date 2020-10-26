@@ -19,6 +19,6 @@ namespace Payroll.Application.ViewModels
         public DateTime EndHireDate { get; set; }
         public DateTime ReHireDate { get; set; }
         public double BasicRate { get; set; }
-        public IEnumerable<Employee> Employees { get; set; }
+        
     }
 }

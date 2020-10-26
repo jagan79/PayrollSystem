@@ -7,7 +7,7 @@ namespace Payroll.Application.Interfaces
 {
     public interface IEmployeeService
     {
-        EmployeeViewModel GetEmployees();
+        IEnumerable<EmployeeViewModel> GetEmployees();
         void Create(EmployeeViewModel employeeViewModel);
     }
 }

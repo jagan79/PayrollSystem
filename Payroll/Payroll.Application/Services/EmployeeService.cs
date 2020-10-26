@@ -1,4 +1,6 @@
-﻿using Payroll.Application.Interfaces;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Payroll.Application.Interfaces;
 using Payroll.Application.ViewModels;
 using Payroll.Domain.Commands;
 using Payroll.Domain.Core.Bus;
@@ -13,40 +15,23 @@ namespace Payroll.Application.Services
     {
         private readonly IEmployeeRepository _employeeRepository;
         private readonly IMediatorHandler _bus;
+        private readonly IMapper _autoMapper;
 
-
-        public EmployeeService(IEmployeeRepository employeeRepository, IMediatorHandler bus)
+        public EmployeeService(IEmployeeRepository employeeRepository, IMediatorHandler bus, IMapper automapper)
         {
             _employeeRepository = employeeRepository;
             _bus = bus;
+            _autoMapper = automapper;
         }
 
         public void Create(EmployeeViewModel employeeViewModel)
         {
-            var createEmployeeCommand = new CreateEmployeeCommand (
-                employeeViewModel.IDNumber,
-                employeeViewModel.LastName,
-                employeeViewModel.FirstName,
-                employeeViewModel.MiddleName,
-                employeeViewModel.SSSNumber,
-                employeeViewModel.PhilHealthNumber,
-                employeeViewModel.HDMFNumber,
-                employeeViewModel.PositionId,
-                employeeViewModel.HireDate,
-                employeeViewModel.EndHireDate,
-                employeeViewModel.ReHireDate,
-                employeeViewModel.BasicRate
-                );
-
-            _bus.SendCommand(createEmployeeCommand);
+            _bus.SendCommand(_autoMapper.Map<CreateEmployeeCommand>(employeeViewModel));
         }
 
-        public EmployeeViewModel GetEmployees()
+        public IEnumerable<EmployeeViewModel> GetEmployees()
         {
-            return new EmployeeViewModel()
-            {
-                Employees = _employeeRepository.GetEmployees()
-            };
+            return _employeeRepository.GetEmployees().ProjectTo<EmployeeViewModel>(_autoMapper.ConfigurationProvider);
         }
     }
 }

@@ -3,6 +3,7 @@ using Payroll.Domain.Models;
 using Payroll.Infrastructure.Data.Context;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Payroll.Infrastructure.Data.Repositories
@@ -22,7 +23,7 @@ namespace Payroll.Infrastructure.Data.Repositories
             _context.SaveChanges();
         }
 
-        public IEnumerable<Employee> GetEmployees()
+        public IQueryable<Employee> GetEmployees()
         {
             return _context.Employees;
         }
