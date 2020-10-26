@@ -11,15 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1CFC978C-03E2-45A3-B03B-4DD02129EB7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Application", "Payroll.Application\Payroll.Application.csproj", "{ECCBCB59-FE7E-41AB-A8BF-2170AC9AD0DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll.Application", "Payroll.Application\Payroll.Application.csproj", "{ECCBCB59-FE7E-41AB-A8BF-2170AC9AD0DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Domain", "Payroll.Domain\Payroll.Domain.csproj", "{F46EC88B-2830-4374-B82D-CDAC01579481}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll.Domain", "Payroll.Domain\Payroll.Domain.csproj", "{F46EC88B-2830-4374-B82D-CDAC01579481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Infrastructure.Data", "Payroll.Infrastructure.Data\Payroll.Infrastructure.Data.csproj", "{4A8AB49E-4ED1-4B00-A044-7EAE4BC85543}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll.Infrastructure.Data", "Payroll.Infrastructure.Data\Payroll.Infrastructure.Data.csproj", "{4A8AB49E-4ED1-4B00-A044-7EAE4BC85543}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.UI.Mvc", "Payroll.UI.Mvc\Payroll.UI.Mvc.csproj", "{144A60AA-F42C-4D3A-9E01-2E218AE8F515}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll.UI.Mvc", "Payroll.UI.Mvc\Payroll.UI.Mvc.csproj", "{144A60AA-F42C-4D3A-9E01-2E218AE8F515}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Infrastructure.IoC", "Payroll.Infrastructure.IoC\Payroll.Infrastructure.IoC.csproj", "{72600A0B-9E2B-442E-AF53-BB0B0062876D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payroll.Infrastructure.IoC", "Payroll.Infrastructure.IoC\Payroll.Infrastructure.IoC.csproj", "{72600A0B-9E2B-442E-AF53-BB0B0062876D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{1D5CE81F-045A-4E00-B94B-95F07AD99234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Infrastructure.Bus", "Payroll.Infrastructure.Bus\Payroll.Infrastructure.Bus.csproj", "{852AE843-8047-4621-89FB-758ED6024132}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{72600A0B-9E2B-442E-AF53-BB0B0062876D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72600A0B-9E2B-442E-AF53-BB0B0062876D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72600A0B-9E2B-442E-AF53-BB0B0062876D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852AE843-8047-4621-89FB-758ED6024132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852AE843-8047-4621-89FB-758ED6024132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852AE843-8047-4621-89FB-758ED6024132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852AE843-8047-4621-89FB-758ED6024132}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +65,7 @@ Global
 		{4A8AB49E-4ED1-4B00-A044-7EAE4BC85543} = {C79BA297-B382-40AC-BA50-92F16F5EA9C2}
 		{144A60AA-F42C-4D3A-9E01-2E218AE8F515} = {1CFC978C-03E2-45A3-B03B-4DD02129EB7A}
 		{72600A0B-9E2B-442E-AF53-BB0B0062876D} = {C79BA297-B382-40AC-BA50-92F16F5EA9C2}
+		{852AE843-8047-4621-89FB-758ED6024132} = {C79BA297-B382-40AC-BA50-92F16F5EA9C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {584F6D0A-C090-43DC-86A8-17283A3AB3BF}
